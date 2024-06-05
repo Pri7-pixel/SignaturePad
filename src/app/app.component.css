@@ -29,7 +29,7 @@ signature-pad{
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
-
+    width: 110px;
     
 
 }
