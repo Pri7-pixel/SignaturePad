@@ -60,4 +60,26 @@ export class AppComponent {
     link.click();
   }
 
+  SaveJPEG(){
+    if (this.signaturePad.isEmpty()){
+      return alert('Please Provide A Signature First')
+    }
+    const data = this.signaturePad.toDataURL('image/jpeg');
+    const link = document.createElement('a');
+    link.href = data;
+    link.download = 'signature.jpeg';
+    link.click();
+  }
+
+  SaveSVG(){
+    if (this.signaturePad.isEmpty()){
+      return alert('Please Provide A Signature First')
+    }
+    const data = this.signaturePad.toDataURL('image/svg+xml');
+    const link = document.createElement('a');
+    link.href = data;
+    link.download = 'signature.svg';
+    link.click();
+  }
+
 }
